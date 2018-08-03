@@ -55,6 +55,7 @@ https://www.youtube.com/playlist?list=PL_csAAO9PQ8aTL87XnueOXi3RpWE2m_8v
 
 - **If you're planning to build SDK/library/framework and wants to handle UITextField/UITextView with IQKeyboardManager then you're totally going on wrong way.** I would never suggest to add **IQKeyboardManager** as **dependency/adding/shipping** with any third-party library, instead of adding **IQKeyboardManager** you should implement your own solution to achieve same kind of results. **IQKeyboardManager** is totally designed for projects to help developers for their convenience, it's not designed for **adding/dependency/shipping** with any **third-party library**, because **doing this could block adoption by other developers for their projects as well(who are not using IQKeyboardManager and implemented their custom solution to handle UITextField/UITextView thought the project).**
 - If **IQKeyboardManager** conflicts with other **third-party library**, then it's **developer responsibility** to **enable/disable IQKeyboardManager** when **presenting/dismissing** third-party library UI. Third-party libraries are not responsible to handle IQKeyboardManager.
+-- **As per the Apple Doc. -**.**" UITableViewController automatically resizes and repositions its table view when there is inline editing of text fields."** So **IQKeyboardManager will not work with UITableViewController.**
 
 ## Requirements
 [![Platform iOS](https://img.shields.io/badge/Platform-iOS-blue.svg?style=fla)]()
